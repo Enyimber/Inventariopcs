@@ -1,1 +1,1 @@
-alert('Cargando archivos js');
+console.info('Cargando archivos js');
