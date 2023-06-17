@@ -4,7 +4,7 @@
     *Autor: Sergio Galvis
     *Fecha: 17/06/2023
 */
-class HomeController extends CI_Controller 
+class HomeController extends CI_Controller
 {
     // 
     public static $meses;
@@ -13,13 +13,19 @@ class HomeController extends CI_Controller
     {
         //$this->load->model('HomeModel');
         parent::__construct();
-        self::$meses = ['','ENERO','FEBRERO','MARZO','ABRIL','MAYO', 'JUNIO','JULIO','AGOSTO', 'SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+        self::$meses = ['', 'ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'];
     }
 
-    public function index(){
-        /* $this->load->view('plantilla/index'); */
-        $this->load->view('header');
-        $this->load->view('body');
-        
+    public function index()
+    {
+
+
+        $data_header = array(
+            'title' => 'Home',
+            'description' => 'Página principal del aplicativo web Inventario PC`s',
+        );
+
+        $this->load->view('header', $data_header);
+        $this->load->view('home/index');
     }
 }
