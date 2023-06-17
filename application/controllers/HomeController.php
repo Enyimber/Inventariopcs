@@ -12,10 +12,14 @@ class HomeController extends CI_Controller
     public function __construct()
     {
         //$this->load->model('HomeModel');
+        parent::__construct();
         self::$meses = ['','ENERO','FEBRERO','MARZO','ABRIL','MAYO', 'JUNIO','JULIO','AGOSTO', 'SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
     }
 
     public function index(){
-        echo "Creando el controlador del Home a la fecha: ".DATE('Y-m-d H:i:s') . "<br>" . "Mes:"  . self::$meses[date('n')];
+        /* $this->load->view('plantilla/index'); */
+        $this->load->view('header');
+        $this->load->view('body');
+        
     }
 }
