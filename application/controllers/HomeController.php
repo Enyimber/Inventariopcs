@@ -19,7 +19,6 @@ class HomeController extends CI_Controller
     public function index()
     {
 
-
         $data_header = array(
             'title' => 'Home',
             'description' => 'Página principal del aplicativo web Inventario PC`s',
